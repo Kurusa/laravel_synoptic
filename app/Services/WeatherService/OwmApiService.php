@@ -34,7 +34,7 @@ class OwmApiService {
     protected function getParams(array $params): array
     {
         return array_merge([
-            'APPID' => '93d42ddaf258b216da34c067bd913310',
+            'APPID' => env('OWM_KEY'),
             'units' => 'metric',
         ], $params);
     }

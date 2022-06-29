@@ -44,7 +44,6 @@ class DatabaseWeatherHandler
             $sinoptikCallback = json_encode(ParserSinoptik::parse($cityId, $date->timestamp ?: time()), true);
         }
 
-        (self::OWM_RESOURCE[$mode])
         return (self::OWM_RESOURCE[$mode])::toArray([
             $owmData,
             $sinoptikCallback,
